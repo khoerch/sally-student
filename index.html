@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sally Student</title>
+    </head>
+
+    <body>
+        <div id="react-container"></div>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            function App(args) {
+                console.log(args);
+                return (
+                <main>
+                    <section className="about">
+                        <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" height="75px" alt="Current photo of me" />
+                        <h1>{args.user}</h1>
+                    </section>
+                    <section className="employment">
+                        <header>
+                            <h2>Employment History</h2>
+                        </header>
+                        <p>NASA, Alien Language Expert, Sept 2013 - Present</p>
+                        <ul>
+                            <li>Catalog each new alien language as it is introduced</li>
+                            <li>Determine whether humans are able to communicate naturally or whether they require technological assistance</li>
+                            <li>Prepare and warn against possible translation issues that may lead to intergalactic war</li>
+                        </ul>
+
+                        <p>AI Linguistics Ltd, Computer Generated Language Expert, Mar 2006 - Sept 2013</p>
+                        <ul>
+                            <li>Catalog a library of global sentance structure, verb conjugation, and use of tense</li>
+                            <li>Use machine learning to explore the future of language</li>
+                            <li>Developed an easy-to-learn language of the future</li>
+                        </ul>
+                    </section>
+
+                    <section className="education">
+                        <header>
+                            <h2>Education</h2>
+                        </header>
+                        <p>Oxford University, Department of Xenolinguistics, Graduated in 2006 with honors</p>
+                        <ul>
+                            <li>Dissertation: What the history of the Indo-European language can tell us about language across worlds</li>
+                            <li>Alison McMurtrie Award for acheivement in the field of linguistics</li>
+                        </ul>
+                    </section>
+
+                    <section className="other">
+                        <header>
+                            <h2>Hobbies and Interests</h2>
+                        </header>
+                        <p>I am more than a job and a degree</p>
+                        <ul>
+                            <li>Hobbies: ASL, ESL volunteering, piano</li>
+                            <li>Favorite Movie: Arrival</li>
+                            <li>Favorite Book: Ender's Game</li>
+                        </ul>
+                    </section>
+                </main>)
+            }
+
+            ReactDOM.render(
+                <App 
+                    user='Sally Student'
+                />,
+                document.querySelector('#react-container')
+            )
+        </script>
+    </body>
+</html>
